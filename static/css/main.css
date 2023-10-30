@@ -1,0 +1,45 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.btn-danger {
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+.main-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.navbar-brand {
+    font-size: 2rem;
+}
+
+.bold-and-punchy {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #000000;
+}

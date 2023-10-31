@@ -20,7 +20,7 @@
     <div class="container mt-5 main-content">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <h1 class="bold-and-punchy">100's of Coupons are waiting for you!</h1>
+                <h1 class="bold-and-punchy">100's of coupons are waiting for you!</h1>
                 <p class="lead">Search for any product and get the best deals!</p>
                 <br>
                 <form action="/" method="post" class="mb-5">
@@ -38,6 +38,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ result.title }}</h5>
                         <p class="card-text">{{ result.content }}</p>
+                        <p class="card-text" style="font-size: 0.9rem; color: darkgray;">Relevance Score: {{ result.score }}</p>
+
                     </div>
                 </div>
                 {% endfor %}

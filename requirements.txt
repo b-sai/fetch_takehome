@@ -1,2 +1,5 @@
 Flask
 gunicorn
+pinecone_client
+python-dotenv
+sentence-transformers

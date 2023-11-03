@@ -10,6 +10,8 @@ Dependencies:
 
 - Pinecone (I used a free tier of pinecone. You will need an API key from pinecone)
 
+  - Pinecone is a vector database used to perform semantic search
+
 
 ### Running locally:
 
@@ -25,16 +27,19 @@ Obtain a pinecone API key and create a `.env` file in the root with the follwing
 
 ```
 PINECONE_API=
-MODEL_NAME=<name of model you want to use from sentence_transformers>
+MODEL_NAME=
 PINECONE_ENV=us...
 IDX_NAME="indexname"
 ```
 
-NOTE: for model names see: [https://www.sbert.net/docs/pretrained_models.html](https://www.sbert.net/docs/pretrained_models.html)
-
 Prepare data to be inserted into Pinecone by running: `python prepare_data.py` (This will take a minute or two)
 
 Run Flask using `python app.py`
+
+NOTES: 
+
+1. for model names see: [https://www.sbert.net/docs/pretrained_models.html](https://www.sbert.net/docs/pretrained_models.html). I use `multi-qa-MiniLM-L6-cos-v1`
+
 
 ---
 For more details and reasoning behind data preparation, please see `data_preparation.ipynb`

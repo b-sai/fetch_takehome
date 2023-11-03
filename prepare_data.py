@@ -21,14 +21,16 @@ dim = model.encode(["text"])[0].shape[0]
 
 
 
+pinecone.init(api_key=os.environ['PINECONE_API'], environment=os.environ['PINECONE_ENV'])
+
 # create an index in pinecone
 idxs = pinecone.list_indexes()
 
-if 'fetchapp' not in idxs:
-    pinecone.create_index('fetchapp', dimension=dim, metric = 'cosine')
+if os.environ['IDX_NAME'] not in idxs:
+    pinecone.create_index(os.environ['IDX_NAME'], dimension=dim, metric = 'cosine')
     time.sleep(120) # wait for index to be created
     
-index = pinecone.Index("fetchapp")
+index = pinecone.Index(os.environ['IDX_NAME'])
 
 res = model.encode(df['OFFER']).tolist()
 

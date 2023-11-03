@@ -32,6 +32,15 @@ PINECONE_ENV=us...
 IDX_NAME="indexname"
 ```
 
+PINECONE_API is the api key from pinecone
+
+MODEL_NAME is the name of the model you want to use for embeddings
+
+PINECONE_ENV is the region for the pinecone. Find that here: [https://docs.pinecone.io/docs/projects](https://docs.pinecone.io/docs/projects)
+
+IDX_NAME is the name of the index you would like to create in pinecone. It can be something like "fetch-search"
+
+
 Prepare data to be inserted into Pinecone by running: `python prepare_data.py` (This will take a minute or two)
 
 Run Flask using `python app.py`

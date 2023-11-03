@@ -2,7 +2,44 @@
 
 ### By Sai Shreyas Bhavanasi
 
-To view the app goto: [https://fetchdemo.bsai.app/](https://fetchdemo.bsai.app/)
+To interact with the app, visit demo at: [https://fetchdemo.bsai.app/](https://fetchdemo.bsai.app/)
+
+Dependencies: 
+
+- Python 3.9
+
+- Pinecone (I used a free tier of pinecone. You will need an API key from pinecone)
+
+
+### Running locally:
+
+`git clone https://github.com/b-sai/fetch_takehome.git`
+
+`python -m venv venv`
+
+`source venv/bin/activate`
+
+`pip install -r requirements.txt`
+
+Obtain a pinecone API key and create a `.env` file in the root with the follwing keys:
+
+```
+PINECONE_API=
+MODEL_NAME=<name of model you want to use from sentence_transformers>
+PINECONE_ENV=us...
+IDX_NAME="indexname"
+```
+
+NOTE: for model names see: [https://www.sbert.net/docs/pretrained_models.html](https://www.sbert.net/docs/pretrained_models.html)
+
+Prepare data to be inserted into Pinecone by running: `python prepare_data.py` (This will take a minute or two)
+
+Run Flask using `python app.py`
+
+---
+For more details and reasoning behind data preparation, please see `data_preparation.ipynb`
+
+### About the project
 
 - Search
   - I used semantic similarity approach to retrieve values most similar to what the user searches for

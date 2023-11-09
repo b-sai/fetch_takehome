@@ -65,9 +65,9 @@ def index():
         
         offers, res_lines, scores  = nearest_search(query)
         print(scores)
-        # Simulated search results
+
         search_results = [{'title': f'{res_lines[i]}', 'content': f'{offers[i]}','score':f'{scores[i]}'} for i in range(len(scores))]
-            # Add more results as needed
+
        
     return render_template('index.html', search_results=search_results)
 
